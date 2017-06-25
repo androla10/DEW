@@ -1,0 +1,28 @@
+{
+  "name": "xtremdev",
+  "version": "0.0.1",
+  "description": "Proyecto cursos gratuitos de desarrollo front end y back end.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/androla10/DEW.git"
+  },
+  "keywords": [
+    "Cursos",
+    "Gratuitos",
+    "Desarrollo",
+    "Web",
+    "Front",
+    "End",
+    "BackEnd"
+  ],
+  "author": "Zeler Benji Villarreal Marcelo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/androla10/DEW/issues"
+  },
+  "homepage": "https://github.com/androla10/DEW#readme"
+}
