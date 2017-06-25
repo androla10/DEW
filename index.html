@@ -5,6 +5,7 @@
 	<title>Desarrollo Web</title>
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="dist/dw.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<!--Dialog-->
@@ -14,13 +15,21 @@
 	<!--Header-->
 	<header class="header">
 		<div class="flex flex-row flex-row-center navigation">
-			<h2>XtremDev</h2>
+			<h2 class="navigation_title">XtremDev</h2>
 		</div>
 	</header>
 	<div class="form-login">
+		<div class="form-login_title">
+			<h2>Ingrese sus credenciales : </h2>
+			<hr>
+		</div>
 		<div class="form-login_container">
-			<input type="text" placeholder="Ingrese su usuario" class="form-login_input">
-			<input type="text" placeholder="Ingrese su usuario" class="form-login_input">
+			<div class="form-login-group">
+				<input type="text" class="form-login-group_input" placeholder="Ingrese su usuario">
+			</div>
+			<div class="form-login-group">
+				<input type="password" class="form-login-group_input" placeholder="Ingrese su password">
+			</div>
 		</div>
 	</div>
 </body>
