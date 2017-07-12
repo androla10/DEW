@@ -1,37 +1,11 @@
-$border : #ccc;
+@import 'base'
+
+$border : #ccc
 $break-xs : 320px
 $break-sm : 768px
 $break-md : 970px
 $break-lg : 1024px
 
-*
-	padding: 0
-	margin: 0
-	font-family: 'Josefin Sans', sans-serif
-
-
-*,*::before, *::after
-	box-sizing: border-box
-	content: ""
-
-
-body,html
-	height: 100%
-	background: #159957  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #155799, #159957)  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #155799, #159957) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-.header
-	height: 50px
-
-.navigation
-	height: 45px
-	background: #fff
-	background-color: #fff
-
-.navigation_title
-	vertical-align: middle
-	line-height: 1.7em
 
 .flex
 	display: flex;
@@ -51,7 +25,6 @@ body,html
 .form-login
 	background: #fff
 	background-color: #fff
-	height: 35%
 	width: 100%
 	max-width: 500px
 	position: absolute
@@ -61,7 +34,6 @@ body,html
 	border-radius: 0.4em
 
 .form-login_title
-	height: 40px
 	padding: 0.7em 0.7em
 
 .form-login-group
@@ -70,16 +42,21 @@ body,html
 	vertical-align: middle
 
 
-.form-login_container
-	height: calc(100% - 40px)
-
 .form-login-group_input
 	width: 100%
 	height: 60px
 	font-size: 1.2em
 	border: none
 	border-bottom: 1px solid #ccc
-	outline: 0 none;
+	outline: 0 none
+	&:focus
+		outline: 0
+		border: 1px solid #ccc
+		background-color: #fefefe
+		box-shadow: 0 0 5px #a2a2a2
+		transition: none
+		
+
 
 @media screen and (min-width: $break-xs)
 	body
