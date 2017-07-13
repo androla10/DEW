@@ -28,4 +28,3 @@ var logueo = function(){
 			}
 		});
 }
-wq

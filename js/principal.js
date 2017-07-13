@@ -1,10 +1,7 @@
 $(function(){
 
-
-	$('.flexslider').flexslider({
-    	animation: "slide",
-    	useCSS: false
-  	});
-
+	$('.carousel').carousel({
+	  interval: 2000
+	})
 
 })

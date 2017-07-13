@@ -47,4 +47,8 @@ var validarSession = function(){
 	var user = sessionStorage.getItem("user");
 	if(user !== undefined && user !== null)
 		window.location.href = 'principal.html';
+    else{
+    	if(window.location.pathname !== "/index.html")
+    		window.location.href = 'index.html';	
+    }
 }
