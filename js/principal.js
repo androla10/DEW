@@ -24,12 +24,43 @@ $(function(){
 		}
 	});
 
+	$(".btn-comenzar").on("click")
+
 	$('.carousel').carousel({
 	  interval: 2000
-	})
+	});
 
 })
 
+
+var comenzarCurso = function(){
+	var elemento = this;
+	var curso = elemento.attr("data-curso");
+	var page = elemento.attr("data-page");
+	var url = "";
+
+	switch( curso )
+	{
+		case 'html' : {
+			url="/html5.html?page="+page;
+		},
+
+		case 'css': {
+			url="/css.html?page="+page;
+		},
+
+		case 'javascript': {
+			url="/javascript.html?page="+page;
+		},
+
+		case 'angularjs': {
+			url="/angularjs.html?page="+page;
+		}	
+	}
+
+
+	window.location.href="/"
+}
 
 
 var validarCursoExistente = function(nombreCurso){
