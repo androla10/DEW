@@ -24,7 +24,7 @@ $(function(){
 		}
 	});
 
-	$(".btn-comenzar").on("click")
+	$(".btn-comenzar").on("click",comenzarCurso);
 
 	$('.carousel').carousel({
 	  interval: 2000
@@ -34,32 +34,37 @@ $(function(){
 
 
 var comenzarCurso = function(){
-	var elemento = this;
+	var elemento = $(this);
+	console.log();
 	var curso = elemento.attr("data-curso");
 	var page = elemento.attr("data-page");
 	var url = "";
 
 	switch( curso )
 	{
-		case 'html' : {
-			url="/html5.html?page="+page;
-		},
-
-		case 'css': {
-			url="/css.html?page="+page;
-		},
-
-		case 'javascript': {
-			url="/javascript.html?page="+page;
-		},
-
-		case 'angularjs': {
-			url="/angularjs.html?page="+page;
-		}	
+		case 'html' : 
+			url="/cursos/html5.html?page="+page;
+			break;
+		
+		case 'css': 
+			url="/cursos/css.html?page="+page;
+			break;
+		
+		case 'javascript': 
+			url="/cursos/javascript.html?page="+page;
+			break;
+		
+		case 'angularjs': 
+			url="/cursos/angularjs.html?page="+page;
+			break;
+		
+		default :
+			url = "";
+		
 	}
 
-
-	window.location.href="/"
+	if(url!=="" || url !== undefined)
+		window.location.href= url;	
 }
 
 

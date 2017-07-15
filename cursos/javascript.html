@@ -4,39 +4,93 @@
 	<meta charset="UTF-8">
 	<title>Desarrollo Web</title>
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-	<link rel="stylesheet" href="dist/foundation.min.css">
-	<link rel="stylesheet" href="dist/dw.min.css">
+	
+	<!-- Normalize CSS -->
+	<link rel="stylesheet" href="../dist/normalize.css">
+
+	<!-- Jquery -->
+
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="dist/foundation.min.js"></script>
+	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<!-- Bootstrap JS-->
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Personalizado -->
+	<link rel="stylesheet" href="../dist/dw.min.css">
+
+
+		<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+	<!-- Controller -->
+	<script type="text/javascript" src="../js/principal.js"></script>
+
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
+
 	<!--Dialog-->
 	<div class="dialog">
 		
 	</div>
+
 	<!--Header-->
-	<header class="header">
-		<div class="flex flex-row flex-row-center navigation">
-			<h4 class="navigation_title">XtremDev</h4>
+	<nav class="navigation">
+		<h4 class="navigation__title">XtremDev</h4>
+		<input class="navigation__search" id="searchCursos" type="text"  placeholder="Buscar Curso">
+	</nav>
+	
+	<main class="container main">
+			<section class="video mrg-btm-10">
+				<embed style="width: 100%; height: 100%" src="https://www.youtube.com/embed/bDOn2lI9KXs?list=PLCKuOXG0bPi0Fbb70mxM0V3P6XHXKiVmq?ecver=2"></embed>
+			</section>
+			<section class="information">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="information__teacher">
+							<div class="row">
+								<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+								<img src="../img/teacher/fherrera.jpg" class="img-responsive img-circle" alt="Fernando Herrera">
+							</div>
+							<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+								<h3>Fernando Herrera </h3>
+								<h4>Analista de Sistemas y Desarrollador Web</h4>
+								<p>
+								Soy un analista de sistemas de computo, con poco más de 17 años en el mundo del desarrollo de aplicaciones de todo tipo.
+								</p>
+								<p>
+								Me encanta programar, crear cosas que la gente use, enseñar, también soy maestro sustituto en una universidad en las clases de programación, soy autor de código en Envato Marketplace.
+								</p>
+								<p>
+								Aquí en Udemy, he tenido la increíble experiencia de poder enseñar a muchos alumnos, y espero seguir mejorando mis cursos y los temas con forme la actualidad vaya cambiando.
+								</p>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="discution-navideo">
+				
+			</section>
+	</main>
+
+	<footer class="footer">
+		<div class="footer__copyright">
+			<small>© 2017 xtremdev.com Made with ♥ by <span> <a href="mailto: villarreal.benji@gmail.com">Zeler Benji Villarreal Marcelo</a></span> || <span><a href="mailto: pedrogamero@cibertec.edu.pe"> Pedro Gamero </a></span>.</small>
 		</div>
-	</header>
-	<div class="form-login">
-		<div class="form-login_title">
-			<h5>Ingrese sus credenciales : </h5>
-			<hr>
-		</div>
-		<div class="form-login_container">
-			<div class="form-login-group">
-				<input type="text" class="form-login-group_input" placeholder="Ingrese su usuario">
-			</div>
-			<div class="form-login-group">
-				<input type="password" class="form-login-group_input" placeholder="Ingrese su password">
-			</div>
-			<div class="form-login-group">
-				<a href="#" class="button expanded">Ingrese</a>
-			</div>
-		</div>
-	</div>
+	</footer>
 </body>
 </html>
