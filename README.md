@@ -58,6 +58,7 @@ Repartición de trabajo:
 (www.xtremdev.com/profesores.html)
 (www. xtremdev.com/videos.html)
 
+(Faltantes)
 	Pedro Gamero : 
 		Estará a cargo de diseñar e implementar las lecturas, audios y ejercicios de los cursos.
 (www. xtremdev.com/lecturas.html)
@@ -65,14 +66,16 @@ Repartición de trabajo:
 (www. xtremdev.com/ejercicios.html)
 
 
-/*Entornos*/
-1.- SublimeText 3
-2.- Prepos
+Entornos
 
-/*Instalación*/
-1.- Realizar una copia a una carpeta
+1.- SublimeText 3.
+2.- Prepos.
+
+Instalación
+
+1.- Realizar una copia a una carpeta.
 2.- Abrir un servidor localhost como apache, prepos, tomcat, etc. (En este caso hemos utilizado prepos, jalamos la carpeta al espacio de
-trabajo de prepos y activamos el servidor local)
+trabajo de prepos y activamos el servidor local).
 3.- Probar nuestra plataforma.
 
 Saludos.
