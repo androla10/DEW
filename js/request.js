@@ -55,7 +55,7 @@ var obtenerUsuarioLogueado = function(){
 var validarSession = function(){
 	var user = sessionStorage.getItem("user");
 	if(user === undefined || user === null)
-        if(window.location.pathname !== "/index.html")
+        if(!window.location.pathname.includes("/index.html"))
             window.location.href = 'index.html';    
 
     		
