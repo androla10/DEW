@@ -8,30 +8,32 @@
 	<!-- Normalize CSS -->
 	<link rel="stylesheet" href="dist/normalize.css">
 
+	<!-- FontAwesome CS -->
+	<link rel="stylesheet" href="dist/font-awesome.min.css">
+
 	<!-- Jquery -->
-
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="dist/jquery-3.2.1.min.js"></script>
 	
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="dist/jquery-ui.css">
 
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="dist/jquery-ui.js"></script>
 
 	<!-- Bootstrap JS-->
-		<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="dist/bootstrap.min.css">
 
 		<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="dist/bootstrap-theme.min.css">
 
 	<!-- Personalizado -->
 	<link rel="stylesheet" href="dist/dw.min.css">
 
 
-		<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script type="text/javascript" src="dist/bootstrap.min.js"></script>
 
 
 	<!-- Controller -->
+	<script type="text/javascript" src="js/request.js"></script>
 	<script type="text/javascript" src="js/principal.js"></script>
 
 
@@ -47,7 +49,15 @@
 
 	<!--Header-->
 	<nav class="navigation">
-		<h4 class="navigation__title">XtremDev</h4>
+		<h4 class="navigation__title">
+			<a href="/principal.html">
+			XtremDev
+			</a>
+		</h4>
+		<a class="btn navigation__logout" id="logout">
+			Salir
+		</a>
+		<h5 class="navigation__usuarioLogueado" id="usuarioLogueado">Flr</h5>
 		<input class="navigation__search" id="searchCursos" type="text"  placeholder="Buscar Curso">
 	</nav>
 	
@@ -57,7 +67,6 @@
 		  <ol class="carousel-indicators">
 		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
 		  </ol>
 
 		  <!-- Wrapper for slides -->
@@ -202,8 +211,8 @@
 							</li>
 						</ul>
 						<div class="mrg-btm-10"></div>
-						<button class="btn btn-block btn-comenzar" data-page="1" data-curso="angularjs">
-							Comenzar
+						<button disabled="true" class="btn btn-block btn-comenzar" data-page="1" data-curso="angularjs">
+							Proximamente
 						</button>
 					</div>
 				</div>
@@ -215,6 +224,7 @@
 	<footer class="footer">
 		<div class="footer__copyright">
 			<small>© 2017 xtremdev.com Made with ♥ by <span> <a href="mailto: villarreal.benji@gmail.com">Zeler Benji Villarreal Marcelo</a></span> || <span><a href="mailto: pedrogamero@cibertec.edu.pe"> Pedro Gamero </a></span>.</small>
+			
 		</div>
 	</footer>
 </body>

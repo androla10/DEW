@@ -7,3 +7,46 @@
 	padding: 1em 1em
 .img-circle
 	border: thin solid #ccc
+
+.lista-reproduccion
+	background-color: #ffffff
+	background: #ffffff
+
+.list-container-video
+	list-style : none
+	margin-bottom: 0
+
+.list-container-video__item
+	padding: 0.5em 0.5em
+	border-bottom: thin solid #ccc	
+	padding-left: 3em
+	position: relative
+	cursor: pointer
+
+.list-container-video__item:hover
+	transition: 0.2s all ease-out
+	background: #157d72
+	color: #ffffff
+
+.list-container-video__item::before
+	font-family: FontAwesome;
+	content: "\f144"
+	font-size : 2em
+	position: absolute
+	top: 50%
+	left: 8px
+	transform: translate(0,-50%)
+
+.nav-page__button
+	width: 8em
+	height: 3em
+	display: inline-block
+
+.nav-page__button--siguiente
+	float: right
+
+.nav-page__button--anterior
+	float: left
+
+.list-container-video__item--active
+	background: rgba(255, 167, 34, 0.92) !important

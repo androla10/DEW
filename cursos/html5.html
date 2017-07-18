@@ -4,39 +4,137 @@
 	<meta charset="UTF-8">
 	<title>Desarrollo Web</title>
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-	<link rel="stylesheet" href="dist/foundation.min.css">
-	<link rel="stylesheet" href="dist/dw.min.css">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="dist/foundation.min.js"></script>
+	
+	<!-- Normalize CSS -->
+	<link rel="stylesheet" href="../dist/normalize.css">
+
+	<!-- FontAwesome css-->
+	<link rel="stylesheet" href="../dist/font-awesome.min.css">
+
+	<!-- Jquery -->
+	<script type="text/javascript" src="../dist/jquery-3.2.1.min.js"></script>
+	
+	<link rel="stylesheet" href="../dist/jquery-ui.css">
+
+	<script src="../dist/jquery-ui.js"></script>
+
+	<!-- Bootstrap JS-->
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="../dist/bootstrap.min.css">
+
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="../dist/bootstrap-theme.min.css">
+
+	<!-- Personalizado -->
+	<link rel="stylesheet" href="../dist/dw.min.css">
+
+
+		<!-- Latest compiled and minified JavaScript -->
+	<script src="../dist/bootstrap.min.js" type="text/javascript"></script>
+
+	<!-- Controller -->
+	<script type="text/javascript" src="../js/request.js"></script>
+
+	<script type="text/javascript" src="../js/html.js"></script>
+
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
+
 	<!--Dialog-->
 	<div class="dialog">
 		
 	</div>
+
 	<!--Header-->
-	<header class="header">
-		<div class="flex flex-row flex-row-center navigation">
-			<h4 class="navigation_title">XtremDev</h4>
+	<nav class="navigation">
+		<h4 class="navigation__title">
+			<a href="/principal.html">
+			XtremDev
+			</a>
+		</h4>
+		<a class="btn navigation__logout" id="logout">
+			Salir
+		</a>
+		<h5 class="navigation__usuarioLogueado" id="usuarioLogueado">Flr</h5>
+		<input class="navigation__search" id="searchCursos" type="text"  placeholder="Buscar Curso">
+	</nav>
+	
+	<main class="container main">
+			<section class="video mrg-btm-10">
+				<embed style="width: 100%; height: 100%" id="idVideo" src="https://www.youtube.com/embed/bDOn2lI9KXs?list=PLCKuOXG0bPi0Fbb70mxM0V3P6XHXKiVmq?ecver=2"></embed>
+			</section>
+
+			<section class="nav-page">
+				<div class="nav-page__button">
+					<button type="button" class="btn btn-default nav-page__button--anterior" id="btnAnterior">
+						Clase Anterior
+					</button>
+				</div>
+				<div class="nav-page__button nav-page__button--siguiente">
+					<button type="button" class="btn btn-default" id="btnSiguiente">
+						Clase Siguiente
+					</button>
+				</div>
+			</section>
+
+			<section class="information mrg-btm-10">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="information__teacher">
+							<div class="row">
+								<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+								<img src="../img/teacher/juanPildorasInformaticas.jpg" class="img-responsive img-circle" alt="Fernando Herrera">
+							</div>
+							<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+								<h3>Juan</h3>
+								<h4><strong>Profesor Informática y Nuevas Tecnologías</strong></h4>
+								<p>
+									Apasionado por la ciencia y las nuevas tecnologías
+								</p>
+								
+								<h4><strong>Canal Pildoras Informáticas</strong></h4>
+								<p>
+									Comencé esta aventura para dar soporte a mis alumnos presenciales. Con el apoyo de todos los que me seguís mi canal de YouTube y esta web han crecido mucho más de lo que yo esperaba. Gracias a todos por estar ahí.
+								</p>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="lista-reproduccion">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<ul class="list-container-video">
+							<li class="list-container-video__item" data-page="1">
+								Video 1 -- Presentación del curso.
+							</li>
+							<li class="list-container-video__item" data-page="2">
+								Video 2 -- Conceptos Básicos.
+							</li>
+							<li class="list-container-video__item" data-page="3">
+								Video 3 -- Nuevos elementos de la estructura HTML5.
+							</li>
+							<li class="list-container-video__item" data-page="4">
+								Video 4 -- Estructura del cuerpo y nuevos elementos.
+							</li>
+							<li class="list-container-video__item" data-page="5">
+								Video 5 -- Figure figCaption y nuevos elementos.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+	</main>
+
+	<footer class="footer">
+		<div class="footer__copyright">
+			<small>© 2017 xtremdev.com Made with ♥ by <span> <a href="mailto: villarreal.benji@gmail.com">Zeler Benji Villarreal Marcelo</a></span> || <span><a href="mailto: pedrogamero@cibertec.edu.pe"> Pedro Gamero </a></span>.</small>
 		</div>
-	</header>
-	<div class="form-login">
-		<div class="form-login_title">
-			<h5>Ingrese sus credenciales : </h5>
-			<hr>
-		</div>
-		<div class="form-login_container">
-			<div class="form-login-group">
-				<input type="text" class="form-login-group_input" placeholder="Ingrese su usuario">
-			</div>
-			<div class="form-login-group">
-				<input type="password" class="form-login-group_input" placeholder="Ingrese su password">
-			</div>
-			<div class="form-login-group">
-				<a href="#" class="button expanded">Ingrese</a>
-			</div>
-		</div>
-	</div>
+	</footer>
 </body>
 </html>

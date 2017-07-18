@@ -27,6 +27,11 @@ var ajaxRequest = function(url, verbType, data) {
 };
 
 
+var salir = function(){
+    sessionStorage.removeItem("user");
+    window.location.href="/index.html";
+}
+
 
 var login = function(username, password){
 	return ajaxRequest(urlUser, 'GET', null).then(function(data){
@@ -42,17 +47,39 @@ var login = function(username, password){
 	});
 }
 
+var obtenerUsuarioLogueado = function(){
+    return JSON.parse(sessionStorage.getItem("user"));
+}
+
 
 var validarSession = function(){
 	var user = sessionStorage.getItem("user");
-	if(user !== undefined && user !== null)
-		window.location.href = 'principal.html';
-    else{
-    	if(window.location.pathname !== "/index.html")
-    		window.location.href = 'index.html';	
-    }
+	if(user === undefined || user === null)
+        if(window.location.pathname !== "/index.html")
+            window.location.href = 'index.html';    
+
+    		
 }
 
+var guardarLocalStorage = function(key, objeto){
+    var dataGuardar = JSON.stringify(objeto);
+    localStorage.setItem(key, dataGuardar);
+}
+
+var obtenerLocalStorage = function(key){
+    return localStorage.getItem(key);
+}
+
+var obtenerCursoLlevado = function(){
+    if(obtenerLocalStorage('cursoLlevado') === "null"){
+        var cursoLlevado = {
+        idUsuario : obtenerUsuarioLogueado().id,
+        cursos : []
+    };
+        guardarLocalStorage('cursoLlevado',cursoLlevado);
+    }
+    return JSON.parse(obtenerLocalStorage('cursoLlevado'));
+}
 
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -60,3 +87,5 @@ function getParameterByName(name) {
     results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
+validarSession();

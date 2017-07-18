@@ -19,10 +19,11 @@ $(function(){
 			else{
 				alert("No existe el curso ingresado");
 			}
-			console.log(this.val());
 			buscarCurso(this.val());
 		}
 	});
+
+	$("#logout").on("click",salir);
 
 	$(".btn-comenzar").on("click",comenzarCurso);
 
@@ -30,15 +31,23 @@ $(function(){
 	  interval: 2000
 	});
 
+	var usuarioLogeado = $("#usuarioLogueado");
+
+	var usuario = obtenerUsuarioLogueado();
+
+	usuarioLogueado.innerHTML = usuario.name;
+	
 })
 
 
 var comenzarCurso = function(){
 	var elemento = $(this);
-	console.log();
 	var curso = elemento.attr("data-curso");
 	var page = elemento.attr("data-page");
 	var url = "";
+
+	//var cursoLlevado = obtenerCursoLlevado();
+	//cursoLlevado.cursos.push(curso);
 
 	switch( curso )
 	{

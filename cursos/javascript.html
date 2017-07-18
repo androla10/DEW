@@ -8,31 +8,36 @@
 	<!-- Normalize CSS -->
 	<link rel="stylesheet" href="../dist/normalize.css">
 
+	<!-- FontAwesome css-->
+	<link rel="stylesheet" href="../dist/font-awesome.min.css">
+
 	<!-- Jquery -->
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../dist/jquery-3.2.1.min.js"></script>
 	
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="../dist/jquery-ui.css">
 
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="../dist/jquery-ui.js"></script>
 
 	<!-- Bootstrap JS-->
 		<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="../dist/bootstrap.min.css">
 
 		<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="../dist/bootstrap-theme.min.css">
 
 	<!-- Personalizado -->
 	<link rel="stylesheet" href="../dist/dw.min.css">
 
 
 		<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="../dist/bootstrap.min.js" type="text/javascript"></script>
 
 
 	<!-- Controller -->
-	<script type="text/javascript" src="../js/principal.js"></script>
+	<script type="text/javascript" src="../js/request.js"></script>
+
+	<script type="text/javascript" src="../js/javascript.js"></script>
 
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,15 +52,37 @@
 
 	<!--Header-->
 	<nav class="navigation">
-		<h4 class="navigation__title">XtremDev</h4>
+		<h4 class="navigation__title">
+			<a href="/principal.html">
+			XtremDev
+			</a>
+		</h4>
+		<a class="btn navigation__logout" id="logout">
+			Salir
+		</a>
+		<h5 class="navigation__usuarioLogueado" id="usuarioLogueado">Flr</h5>
 		<input class="navigation__search" id="searchCursos" type="text"  placeholder="Buscar Curso">
 	</nav>
 	
 	<main class="container main">
 			<section class="video mrg-btm-10">
-				<embed style="width: 100%; height: 100%" src="https://www.youtube.com/embed/bDOn2lI9KXs?list=PLCKuOXG0bPi0Fbb70mxM0V3P6XHXKiVmq?ecver=2"></embed>
+				<embed style="width: 100%; height: 100%" id="idVideo" src="https://www.youtube.com/embed/bDOn2lI9KXs?list=PLCKuOXG0bPi0Fbb70mxM0V3P6XHXKiVmq?ecver=2"></embed>
 			</section>
-			<section class="information">
+
+			<section class="nav-page">
+				<div class="nav-page__button">
+					<button type="button" class="btn btn-default nav-page__button--anterior" id="btnAnterior">
+						Clase Anterior
+					</button>
+				</div>
+				<div class="nav-page__button nav-page__button--siguiente">
+					<button type="button" class="btn btn-default" id="btnSiguiente">
+						Clase Siguiente
+					</button>
+				</div>
+			</section>
+
+			<section class="information mrg-btm-10">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="information__teacher">
@@ -82,8 +109,28 @@
 				</div>
 			</section>
 
-			<section class="discution-navideo">
-				
+			<section class="lista-reproduccion">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<ul class="list-container-video">
+							<li class="list-container-video__item" data-page="1">
+								Video 1 -- Introducción a javascript
+							</li>
+							<li class="list-container-video__item" data-page="2">
+								Video 2 -- Mi primer código con javascript
+							</li>
+							<li class="list-container-video__item" data-page="3">
+								Video 3 -- Explicación visual de la clase anterior
+							</li>
+							<li class="list-container-video__item" data-page="4">
+								Video 4 -- Comprendiendo la consola
+							</li>
+							<li class="list-container-video__item" data-page="5">
+								Video 5 -- Prototype
+							</li>
+						</ul>
+					</div>
+				</div>
 			</section>
 	</main>
 
