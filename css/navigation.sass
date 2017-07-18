@@ -13,6 +13,7 @@
 	float: right
 	margin: 0em 0px
 	padding: 0.5em 0.5em
+	display: none
 
 .navigation__usuarioLogueado
 	float: right
@@ -28,3 +29,15 @@
 	padding: 1em 1em
 	cursor: pointer
 	color: red
+
+@media screen and (min-width: $break-sm)
+	.navigation__search
+		display: block;
+
+@media screen and (min-width: $break-md)
+	.navigation__search
+		display: block;
+
+@media screen and (min-width: $break-lg)
+	.navigation__search
+		display: block;
