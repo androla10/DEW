@@ -78,6 +78,15 @@ Instalación
 trabajo de prepos y activamos el servidor local).
 3.- Probar nuestra plataforma.
 
+
+Usuarios para el ingreso:
+flor@gmail.com
+123
+
+admin
+123
+
+
 Saludos.
 Atte : Zeler Benji Villarreal Marcelo
 	
