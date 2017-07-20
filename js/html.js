@@ -1,16 +1,53 @@
+var videos;
+
 $(function(){
-	var page = getParameterByName("page");
-	if(page=== null || page==="" || page === undefined){
-		alert("No retire el parametro page");
-		window.location.href="?page=1"
-	}
 
 	var usuarioLogeado = $("#usuarioLogueado");
 
 	var usuario = obtenerUsuarioLogueado();
 	usuarioLogueado.innerHTML = usuario.name;
 
+	var page = getParameterByName("page");
+	if(page=== null || page==="" || page === undefined){
+		alert("No retire el parametro page");
+		window.location.href="?page=1"
+	}
+
 	$("#logout").on("click",salir);
+
+
+	//Crear el curso
+	const idHtml = 2;
+
+	var promesa = obtenerCurso(idHtml);
+
+	$.when(promesa).then(function(data,textStatus, jqXHR){
+
+	var docente = data.docente;
+	var nombreCurso = data.name;
+	videos = data.videos;
+
+	//Nombre Profesor
+	$("#nombreProfesor").text(docente.nombre)
+
+	//Profesion
+	$("#profesion").text(docente.profesion);
+
+	//Imagen profesor
+	$("#imagenProfesor").attr("src",docente.img);
+
+	//Agregandi descripcion del profesor
+	docente.descripcion.forEach(function(value,index){
+		$("#contanedor-descripcion").append("<p>" + value + "</p>")
+	});
+
+	//Agregando la lista de videos
+	videos.forEach(function(value,index){
+		var template = '<li class="list-container-video__item" data-page="{0}">{1}</li>';
+		var templateRellenado = template.replace("{0}",index+1).replace("{1}",value.nroVideo + " -- " + value.titulo);
+		$(".list-container-video").append(templateRellenado);
+	});
+
 
 	$("#btnSiguiente").on("click",siguiente);
 
@@ -21,6 +58,8 @@ $(function(){
 	$(".list-container-video__item[data-page="+page+"]").addClass("list-container-video__item--active");
 
 	$(".list-container-video__item").on("click",listSeleccionado);
+
+	});
 });
 
 
@@ -33,31 +72,12 @@ var listSeleccionado = function(){
 
 var cambioCapitulo = function(page){
 	var url ="";
-	switch( page ){
-		case 1: 
-			url="https://www.youtube.com/embed/QC9_8nRNNHA?ecver=2";
-			break;
-
-		case 2: 
-			url="https://www.youtube.com/embed/CdfMG_Qy00E?ecver=2";
-			break;
-
-		case 3: 
-			url="https://www.youtube.com/embed/F-cDjBkSRT4?ecver=2";
-			break;
-
-		case 4: 
-			url="https://www.youtube.com/embed/Wjgv2GJUe2I?ecver=2";
-			break;
-
-		case 5:
-			url ="https://www.youtube.com/embed/23U19omettA?ecver=2";
-			break;
-
-		default :
-			url="https://www.youtube.com/embed/QC9_8nRNNHA?ecver=2"
-			break;
-	}
+	videos.forEach(function(value,index){
+		if(value.page === page)
+			url = value.url;
+	});
+	if(url === "")
+		url = videos[0].page;
 	insertarVideo(url);
 }
 
@@ -74,6 +94,8 @@ var siguiente = function(){
 	var page = getParameterByName("page");
 	page = Number.parseInt(page);
 	page++;
+	if(videos.length < page)
+		page = 1;
 	url = window.location.pathname + "?page="+page;
 	window.location.href = url;
 }

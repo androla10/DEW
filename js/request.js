@@ -1,4 +1,6 @@
 var urlUser = "resources/user.json";
+var urlCursos = "../resources/cursos.json";
+var tiempoDemora = 2000;
 
 
 var ajaxRequest = function(url, verbType, data) {
@@ -11,7 +13,9 @@ var ajaxRequest = function(url, verbType, data) {
         data: JSON.stringify(data),
         cache: false
     };
-    $.ajax(options).done(function(json) { d.resolve(json); }).fail(function(jqXhr, textStatus, errorThrown) {
+    $.ajax(options).done(function(json) {
+
+     d.resolve(json); }).fail(function(jqXhr, textStatus, errorThrown) {
         d.reject();
         switch (jqXhr.status) {
             case 401:
@@ -47,6 +51,23 @@ var login = function(username, password){
 	});
 }
 
+var obtenerCurso = function(idCurso){
+    return ajaxRequest(urlCursos, 'GET', null).then(function(data){
+        var object = data[0];
+        //Javascript
+        if(idCurso == 1)
+            object = object.cursos[0];
+        //HTML
+        else if(idCurso == 2)
+            object = object.cursos[1];
+
+        else
+            object = object.cursos[2];
+
+        return object;
+    });
+}
+
 var obtenerUsuarioLogueado = function(){
     return JSON.parse(sessionStorage.getItem("user"));
 }
@@ -56,9 +77,7 @@ var validarSession = function(){
 	var user = sessionStorage.getItem("user");
 	if(user === undefined || user === null)
         if(!window.location.pathname.includes("/index.html"))
-            window.location.href = 'index.html';    
-
-    		
+            window.location.href = 'index.html';
 }
 
 var guardarLocalStorage = function(key, objeto){

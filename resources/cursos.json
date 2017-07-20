@@ -1,0 +1,151 @@
+[
+  {
+    "cursos": [
+      {
+        "id": 0,
+        "name": "javascript",
+        "docente" : {
+            "nombre":"Fernando Herrera",
+            "img": "/img/teacher/fherrera.jpg",
+            "profesion" : "Analista de Sistemas y Desarrollador Web",
+            "descripcion": [
+                "Soy un analista de sistemas de computo, con poco más de 17 años en el mundo del desarrollo de aplicaciones de todo tipo.",
+                "Me encanta programar, crear cosas que la gente use, enseñar, también soy maestro sustituto en una universidad en las clases de programación, soy autor de código en Envato Marketplace.",
+                "Aquí en xtremDev, he tenido la increíble experiencia de poder enseñar a muchos alumnos, y espero seguir mejorando mis cursos y los temas con forme la actualidad vaya cambiando."
+            ]
+        },
+        "videos": [
+            {
+              "id" : 0,
+              "page": 1,
+              "nroVideo": "Video 1",
+              "titulo": "Introducción a javascript",
+              "url": "https://www.youtube.com/embed/bDOn2lI9KXs?list=PLCKuOXG0bPi0Fbb70mxM0V3P6XHXKiVmq?ecver=2"
+            },
+            {
+              "id" : 1,
+              "page": 2,
+              "nroVideo": "Video 2",
+              "titulo": "Mi primer código con javascript",
+              "url": "https://www.youtube.com/embed/VNRDmHvYp80?list=PLCKuOXG0bPi0Fbb70mxM0V3P6XHXKiVmq?ecver=2"
+            },
+            {
+              "id" : 2,
+              "page": 3,
+              "nroVideo": "Video 3",
+              "titulo": "Explicación visual de la clase anterior",
+              "url": "https://www.youtube.com/embed/PIUBwqWN4aU?list=PLCKuOXG0bPi0Fbb70mxM0V3P6XHXKiVmq?ecver=2"
+            },
+            {
+              "id" : 3,
+              "page": 4,
+              "nroVideo": "Video 4",
+              "titulo": "Comprendiendo la consola",
+              "url": "https://www.youtube.com/embed/WV-Gy3i-QnY?list=PLCKuOXG0bPi0Fbb70mxM0V3P6XHXKiVmq?ecver=2"
+            }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "html5",
+        "docente" : {
+            "nombre":"Juan",
+            "img": "/img/teacher/JuanPildorasInformaticas.jpg",
+            "profesion" : "Profesor Informática y Nuevas Tecnologías",
+            "descripcion": [
+                "Apasionado por la ciencia y las nuevas tecnologías",
+                "Me encanta programar, crear cosas que la gente use, enseñar, también soy maestro sustituto en una universidad en las clases de programación, soy autor de código en Envato Marketplace.",
+                "Aquí en xtremDev, he tenido la increíble experiencia de poder enseñar a muchos alumnos, y espero seguir mejorando mis cursos y los temas con forme la actualidad vaya cambiando."
+            ]
+        },
+        "videos": [
+            {
+              "id" : 0,
+              "page": 1,
+              "nroVideo": "Video 1",
+              "titulo": "Presentación del curso.",
+              "url": "https://www.youtube.com/embed/QC9_8nRNNHA?ecver=2"
+            },
+            {
+              "id" : 1,
+              "page": 2,
+              "nroVideo": "Video 2",
+              "titulo": "Conceptos Básicos.",
+              "url": "https://www.youtube.com/embed/CdfMG_Qy00E?ecver=2"
+            },
+            {
+              "id" : 2,
+              "page": 3,
+              "nroVideo": "Video 3",
+              "titulo": "Nuevos elementos de la estructura HTML5.",
+              "url": "https://www.youtube.com/embed/F-cDjBkSRT4?ecver=2"
+            },
+            {
+              "id" : 3,
+              "page": 4,
+              "nroVideo": "Video 4",
+              "titulo": "Estructura del cuerpo y nuevos elementos.",
+              "url": "https://www.youtube.com/embed/Wjgv2GJUe2I?ecver=2"
+            },
+            {
+              "id" : 4,
+              "page": 5,
+              "nroVideo": "Video 5",
+              "titulo": "Figure figCaption y nuevos elementos.",
+              "url": "https://www.youtube.com/embed/23U19omettA?ecver=2"
+            }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "css3",
+        "docente" : {
+            "nombre":"Carlos Arturo",
+            "profesion" : "Creador de Falcon Master",
+            "img":"/img/teacher/carlosArturoFalconMaster.jpg",
+            "descripcion": [
+                "Mi nombre es Carlos Arturo Esparza, soy creador de multiples proyectos en la web, incluyendo FalconMasters una Comunidad en donde enseño Diseño y Desarrollo web y en donde cuento con mas de 160,000 estudiantes siguiendo mis cursos y tutoriales.",
+                "Me he dedicado al Diseño y Desarrollo web por mas de 7 años, durante todo ese tiempo he descubierto todas las ventajas que me otorga programar sitios web, es por eso que comparto mi conocimiento con otras personas para que también puedan hacerlo."
+            ]
+        },
+        "videos": [
+            {
+              "id" : 0,
+              "page": 1,
+              "nroVideo": "Video 1",
+              "titulo": "Introducción.",
+              "url": "https://www.youtube.com/embed/24gNhTcy6pw?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR?ecver=2"
+            },
+            {
+              "id" : 1,
+              "page": 2,
+              "nroVideo": "Video 2",
+              "titulo": "Selectores.",
+              "url": "https://www.youtube.com/embed/uqkj7HQ7ids?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR?ecver=2"
+            },
+            {
+              "id" : 2,
+              "page": 3,
+              "nroVideo": "Video 3",
+              "titulo": "Unidades de medida.",
+              "url": "https://www.youtube.com/embed/BTv5Etachw0?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR?ecver=2"
+            },
+            {
+              "id" : 3,
+              "page": 4,
+              "nroVideo": "Video 4",
+              "titulo": "Unidades de color.",
+              "url": "https://www.youtube.com/embed/XHkcNr93xoE?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR?ecver=2"
+            },
+            {
+              "id" : 4,
+              "page": 5,
+              "nroVideo": "Video 5",
+              "titulo": "Modelo de caja.",
+              "url": "https://www.youtube.com/embed/SKkKLi1wAos?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR?ecver=2"
+            }
+        ]
+      }
+    ]
+  }
+]
